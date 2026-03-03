@@ -21,6 +21,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Expõe a porta que o FastAPI/Uvicorn costuma usar
 EXPOSE 8000
 
+
+### Comando CMD abaixo movido para o docker-compose.yml
+
 # Comando para rodar o servidor (Uvicorn)
 # '--host 0.0.0.0' é OBRIGATÓRIO para o Docker conseguir acessar o serviço
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

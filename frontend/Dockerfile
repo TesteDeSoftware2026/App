@@ -17,6 +17,9 @@ COPY . .
 # Expõe a porta que o React costuma usar
 EXPOSE 5173
 
+
+### Comando CMD abaixo movido para o docker-compose.yml
+
 # Comando para rodar o Vite
 # O "--host" permite que o Docker mapeie a porta para fora do container
-CMD ["npm", "run", "dev", "--", "--host"]
+# CMD ["npm", "run", "dev", "--", "--host"]
