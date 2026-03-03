@@ -180,7 +180,7 @@ Isso evita conflito no Pull Request.
 
 ## 6. Enviando para o GitHub
 
-Primeiro push da branch:
+Se for o primeiro push da branch use a flag "-u":
 
 ```
 git push -u origin nome-da-branch
@@ -188,7 +188,7 @@ git push -u origin nome-da-branch
 
 Depois disso:
 ```
-git push
+git push origin nome-da-branch
 ```
 
 ## 7. Abrindo Pull Request
@@ -213,28 +213,35 @@ git checkout main
 git pull origin main
 git checkout -b nome-da-branch
 
+
 # Alterações feitas, prepare o commit:
 
 git add .
 git commit -m "feat: minha feature"
+
 
 # troca para a branch main da sua maquina, e traz a branch main do github:
 
 git checkout main
 git pull origin main
 
-# troca para a sua brach e traz a branch main
+
+# troca para a sua brach e traz a branch main:
+
 git checkout feature/minha-feature
 git merge main
 
+
 # Se NÃO houver conflitos:
-git push
+
+git push origin nome-da-branch
+
 
 # Se houver conflitos, veja onde estão, resolva-os manualmente, e depois:
 
 git add .
 git commit -m "resolve: conflitos entre a nome-da-branch com a main"
-git push
+git push origin nome-da-branch
 ```
 
 Pull Request → revisão → merge.
