@@ -13,8 +13,7 @@ DATABASE_URL = (
 #Cria o mecanismo de conexão com o banco de dados
 engine = create_engine(
     DATABASE_URL,
-    echo=False,
-    future=False
+    echo=False
 )
 
 #Cria uma sessão para interagir com o banco de dados
