@@ -141,6 +141,59 @@ code .
 
 ---
 
+# 🔐 Variáveis de Ambiente (.env)
+
+O projeto utiliza um único arquivo .env localizado na raiz do projeto, no mesmo nível do docker-compose.yml.
+
+Esse arquivo contém configurações sensíveis (credenciais, chaves JWT, etc.) que não devem ser versionadas no Git.
+
+Portanto, na raiz da pasta do projeto, no mesmo nivel das pastas `backend/` e `frontend/` e do arquvio `docker-compose.yml`
+
+⚠️ Nunca faça commit do arquivo .env.
+
+Ele deve permanecer listado no .gitignore.
+
+# 📄 Arquivo .env.example
+
+O repositório contém um arquivo modelo chamado:
+
+.env.example
+
+Esse arquivo define todas as variáveis necessárias para rodar o projeto.
+
+
+# 🛠️ Como configurar o .env
+
+Após clonar o projeto, cada integrante deve:
+
+- Criar um arquivo, apenas com `.env` no nome
+
+- Copie todo o conteúdo do arquivo `.env.example` e cole no `.env`
+
+Os valores das variaveis serão compartilhadas de forma segura entre os integrantes da equipe.
+
+Depois disso:
+
+- Abra o arquivo .env
+
+- Preencha os valores das variáveis
+
+
+---
+# 📌 Importante
+
+O docker-compose utiliza automaticamente o arquivo .env da raiz do projeto para configurar os containers.
+
+Isso garante que:
+
+credenciais não fiquem expostas no código
+
+todos os desenvolvedores utilizem a mesma estrutura de variáveis
+
+seja fácil trocar configurações entre ambientes
+
+---
+
 # 🌿 Fluxo de Trabalho com Git
 
 ## ⚠️ Regra Principal
